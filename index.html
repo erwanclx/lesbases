@@ -1,0 +1,96 @@
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Bases du HTML/CSS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+    <h1>Les bases du HTML/CSS</h1>
+        <nav>
+            <ul class="navbar">
+                <li><a href="#HTMLCSS">HTML vs CSS</a></li>
+                <li><a href="#HTML">Structure du HTML</a></li>
+                <li><a href="#CSS">Structure du CSS</a></li>
+                <li><a href="#EXAMPLE">Exemples d'éléments à copier</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="HTMLCSS">
+        <h2>I.  HTML vs CSS</h2>
+        <p>Le HTML et le CSS sont différents de par leur syntaxe et leur utilité. Le HTML va se charger de fournir le contenu, là où le CSS vas seulement le styliser. Ce style va passer par le positionnement, la couleur, etc. Pour bien comprendre la différence je vais vous montrer les deux mêmes éléments sauf que l'un sera constitué à 100% d'HTML et l'autre sera stylisé.</p>
+        <div class="container-example1">
+            <input type="submit" value="Clic sur moi !" class="100html">
+            <input type="submit" value="Clic sur moi !" class="htmlcssbutton">
+        </div>
+        <i>Pour retrouver tout les éléments HTML et CSS ainsi que leur explications vous pouvez allez sur <a class="w3s" href="https://www.w3schools.com/" target="_blank">https://www.w3schools.com/</a></i>
+    </section>
+    <section id="HTML">
+        <h2>II.  La structure du HTML</h2>
+        <p>Comme je l'ai dis plus haut le HTML va générer notre contenu, il est donc le coeur de notre page. Pour que notre page soit bien comprises par notre navigateur, la première étape est d'écrire ceci :</p>
+        <div class="code-container">
+        <pre>
+        <code class="code-doc">
+            &lt;html lang="fr">
+            &lt;head>
+                &lt;meta charset="UTF-8">
+                &lt;title>Ma page web&lt;/title>
+            &lt;/head>
+            &lt;body>
+            &lt;/body>
+            &lt;/html>
+        </code>
+        </pre>
+        <p class="explication">Le code que vous voyez à votre gauche se nomme le doctype, il permet de donner des instructions d'interprétations au navigateur. La première ligne signifie au navigateur qu'on écrit du HTML et que le contenu de la page sera en français. La suite se décompose en 2 parties : head et body. Pour faire simple, la partie head n'est pas visible par l'utilisateur (à part le title qui correspond au titre de la page). La partie body recevra tout les éléments "visibles".</p>
+        </div> 
+        <p>Si vous entrez le code ci-dessus vous constaterez aucun changement sur votre page web. Pour en avoir, on va remplir notre body. Il existe une multitude de balises pour des cas différents et précis, c'est pour cela qu'internet sera toujours votre meilleur ami. On va parler des plus communes :</p><br>
+        <ul>
+            <li><code>&lt;p>...&lt;p/></code> : P pour paragraphe, dans cette balise on va écrire notre texte, elle s'accompagnera de l'élement <code>&lt;br/></code> pour revenir à la ligne</li>
+            <li><code>&lt;h1>...&lt;h1/></code> : Cette balise agit exactement de la même manière que P mais sert à indiquer des titres. Il y a une hiérarchie de titre qui va de h1 à h5 (h1 étant le plus grand).</li> 
+            <li><code>&lt;div>...&lt;div/></code> : Les div s'apparentent à des dossiers, elles permettent de regrouper des parties de code pour leur positionnement par exemple.</li>
+            <li><code>&lt;section>...&lt;section/></code> : Les sections sont comme l'indique leur nom des sections, elles agissent un peu de la même manière qu'une div.</li>
+            <li><code>&lt;ul>...&lt;ul/></code> : La balise ul permet de créer une listes, les éléments de la liste s'indiquent de cette manière : <code>&lt;li>...&lt;li/></code></li>
+            <li><code>&lt;img src="" alt""></code> : IMG fonctionne différemment d'une balise classique car elle ne nécessite pas de fermeture. Dans les guillemets de src on mettra la lien de l'image (local sur le poste ou hébergé) et dans alt, un texte au cas où l'image ne se chargerait pas.</li>
+            <li><code>&lt;input value="" type=""></code> : Input fonctionne avec un type, chaque type aura des arguments différents, les plus connus sont submit pour envoyer un formulaire ou encore text pour créer un champ de texte, il fonctionne souvent aussi avec une value. Par exemple <code>&lt;input value="" type="text"></code> donnera le résultat suivant : <input value="" type="text"> et avec l'argument readonly <code>&lt;input type="text" value="Pas modifiable" readonly></code> <input type="text" value="Pas modifiable" readonly></li>
+        </ul> 
+        <br>
+        <div class="indent-content">
+        <p>Pour qu'un code soit facilement maintenable à jour et pour éviter un maximum de bug il est vivement reccomandé de l'aérer, l'indenté et de mettre des commentaires. L'indentation la plus simple est de mettre un alinéa à chaque sous-élément. Les commentaires s'écrivent de la manière suivante : &lt;!--...--></p> <img src="indent.png" style="width: 20%;">
+        </div>
+        <p>Enfin, une des bases du HTML va être de nommer nos éléments. Cela va être utile d'une part pour se retrouver dans notre code mais aussi plus tard en CSS. Pour cela les deux méthodes les plus utilisées sont l'id et la class. Pour les placer, on les écrit dans n'importe quelle balise de la manière indiquée ci-dessous. La class et l'id se placent de la même manière mais n'ont pas le même rôle. L'id désigne un élément unique alors que la class peut être attribuée à plusieurs éléments.</p>
+        <code>&lt;p class="notes">...&lt;p/></code> <code>&lt;img src"" alt"" id="introduction"></code>
+    </section>
+    <section id="CSS">
+        <h2>III.  La structure du CSS</h2>
+        <p>Maintenant qu'on a vu les bases du HTML on va parler du CSS. Il peut paraitre un peu compliqué à première vue mais il ne l'est pas tant que ça. Le CSS peut être rédigé de deux manières : dans une balise <code>&lt;style>...&lt;/style></code> dans notre page HTML <i>(pas reccomandé)</i> ou dans un fichier css. Une fois le fichier css créé on le place à un endroit simple par exemple à la racine d'un dossier pour pouvoir y faire appel simplement et avec un nom simple aussi. Imaginons que dans mon dossier Site j'ai ma page index.html et mon fichier styles.css, la ligne de code pour faire appel à notre fichier css sera la suivante : <code>&lt;link rel="stylesheet" href="styles.css"></code><br>
+        <br>Maintenant que notre fichier est créé on va pouvoir commencer à élaborer notre CSS. Pour styliser nos éléments, il faut qu'on les sélectionnes. Pour cela 3 principales manières : </p>
+        <ul>
+            <li>La sélection de tout les éléments d'un même type : imaginons que je veux que tout mes paragraphes soit en rouge, dans ce cas je ferai simplement appel à "p".</li>
+            <li>La sélection d'un ou plusieurs éléments par class : si un ou plusieurs éléments possèdent une class alors je n'ai qu'à faire .lenomdemaclass et cela va sélectionner tout les éléments appartenant à ma class.</li>
+            <li>La sélection d'un élément unique par un id : pour sélectionner un élément qui possède un id on fait appel à lui via #monid.</li>
+        </ul>
+        <p>L'appel est faite, maintenant plus qu'à styliser. Dans notre exemple on va mettre tout les paragraphes en rouge. Pour se faire on écrit notre code CSS de la manière suivante : </p>
+            <pre><code class="css-example">
+ p {
+ color: red;
+ }
+            </code></pre>
+        <p>Le CSS est extrêmement complet et offre des possibilités infinies grâce à des combinaisons plus ou moins exotiques, il et impossible de connaitre tout les éléments en CSS mais je vais en lister quelques un qui sont assez communs.</p>
+        <ul>
+            <li><code>color: ... ;</code> : il permet de colorer le texte d'un élément, les valeurs acceptées sont le nom des couleurs en anglais, du rgb, rgba et hex.</li>
+            <li><code>background-color : ... ;</code> : il permet de colorer le fond d'un élément, il accepte les mêmes valeur que color.</li>
+            <li><code>width: ... ;</code> : il permet de définir une largeur à un élément, et accepte des valeurs px, en pourcentage principalement. Il fonctionne de la même manière que height pour la hauteur.</li>
+            <li><code>font-size: ... ;</code> : il permet de modifier la taille d'un texte en px, em, pourcentage</li>
+            <li><code>display: ... ;</code> : il permet de changer le mode d'affichage, il existe en flex, grid, et beaucoup d'autres. Chacun a sa particularité et son utilité mais flex est le plus utilisé.</li>
+        </ul>
+    </section>
+    <section id="EXAMPLE">
+        <h2>IV.  Exemples d'éléments à copier</h2>
+    </section>
+    
+</body>
+</html>
+
+

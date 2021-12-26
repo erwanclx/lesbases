@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+header {
+    width: 100%;
+}
+
+header > h1 {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: #e9ac04;
+    color: white;
+    text-align: center;
+}
+
+nav {
+    background-color: #c79200;
+    color: white;
+    margin-top: 0;
+}
+
+nav > ul {
+    display: flex;
+    justify-content: space-around;
+    list-style-type: none;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.navbar > li {
+    cursor: pointer;
+}
+
+section {
+    padding-right: 3%;
+    padding-left: 3%;
+}
+
+#HTMLCSS {
+    margin-top: 10px;
+}
+
+.w3s {
+    color: #c79200;
+}
+
+.container-example1 {
+    margin: auto;
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+
+.htmlcssbutton {
+    line-height: 0;
+    font-weight: normal;
+    text-decoration: inherit;
+    border-radius: 30px;
+    border: none;
+    background-color: #e9ac04;
+    padding: 15px;
+    width: 195px;
+    height: 39px;
+    font-size: 1.1em;
+    text-align: center;
+    color: #FFF;
+    cursor: pointer;
+    transition: ease-in-out 0.3s;
+}
+
+.htmlcssbutton:hover {
+    transform: scale(1.05);
+    background-color: #f1b101;
+}
+
+.htmlcssbutton:active {
+    background-color: #e9ab00;
+    transform: scale(1);
+}
+
+.code-doc {
+    background-color: #eee;
+  border: 1px solid #999;
+  display: block;
+  width: 100%;
+padding-right: 10px;
+padding-left: 10px;
+
+}
+
+code {
+    background-color: #eee;
+  border: 1px solid #999;
+  padding-left: 2px;
+  padding-right: 2px;
+}
+
+.code-container > p {
+    padding-left: 30px;
+    margin-top: 50px;
+}
+
+.code-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+section > ul {
+    margin-left: 30px;
+}
+
+.indent-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.indent-content > p {
+    width: 30%;
+    border: 1px solid rebeccapurple;
+    margin-top: auto;
+    margin-bottom: auto;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+.css-example {
+    background-color: #eee;
+  border: 1px solid #999;
+  display: block;
+  width: 5%;
+  line-height: 1.3;
+}
